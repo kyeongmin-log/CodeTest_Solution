@@ -6,4 +6,4 @@
 
 ### 정리 방식
 
-사이트 이름(folder) - 문제 명(folder) - 풀이 및 리뷰(README.md)
+사이트 이름(folder) - 문제 명(folder) - 풀이 및 리뷰(readme.md)
