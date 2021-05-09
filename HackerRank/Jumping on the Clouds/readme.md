@@ -2,7 +2,7 @@
 
 ## 문제
 
-[Jumping on the Clouds](https://www.hackerrank.com/challenges/30-2d-arrays/problem) : 로그인 필요.
+[Jumping on the Clouds](https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) : 로그인 필요.
 
 ## 내 풀이
 
