@@ -54,7 +54,7 @@ function repeatedString(s, n) {
     }
   }
 
-  return ((n - remainder) / s.length) * count) + remainderA;
+  return ((n - remainder) / s.length) * count + remainderA;
 }
 ```
 
