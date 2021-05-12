@@ -24,9 +24,7 @@
 ```js
 function repeatedString(s, n) {
   // Write your code here
-  const setString = new Set(s);
-  let max = 0;
-  let chLength;
+  let count;
   let repeatedStr = [];
 
   s = s.split("");
@@ -35,12 +33,8 @@ function repeatedString(s, n) {
       if (repeatedStr.length !== n) repeatedStr.push(ch);
     });
   }
-  for (let item of setString.values()) {
-    chLength = repeatedStr.filter((ch) => ch === item).length;
-    if (max < chLength) max = chLength;
-  }
 
-  return max;
+  return repeatedStr.filter((ch) => ch === "a").length;
 }
 ```
 
