@@ -4,7 +4,7 @@
 
 [Repeated String](https://www.hackerrank.com/challenges/repeated-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) : 로그인 필요.
 
-## 내 풀이
+## 풀이
 
 > parametar and retrun description
 
@@ -19,7 +19,7 @@
  */
 ```
 
-> JS : fail (2 hours time limit)
+> by oneself : fail (2 hours time limit)
 
 ```js
 function repeatedString(s, n) {
@@ -38,7 +38,7 @@ function repeatedString(s, n) {
 }
 ```
 
-> 다른 분의 코드 참고
+> others code reference
 
 ```js
 function repeatedString(s, n) {
