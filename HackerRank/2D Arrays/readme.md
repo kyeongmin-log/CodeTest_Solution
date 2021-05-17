@@ -2,21 +2,30 @@
 
 ## 문제
 
-[2D Arrays](https://www.hackerrank.com/challenges/30-2d-arrays/problem) : 로그인 필요.
+[2D Arrays](https://www.hackerrank.com/challenges/2d-array/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) : 로그인 필요.
 
 ## 내 풀이
 
 > JS
 
 ```js
-function arraySum(arr) {
-  const arrayLength = arr.length - 2;
-  let sum = 0;
+/*
+ * Complete the 'hourglassSum' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+ */
+function hourglassSum(arr) {
+  // arr[0][0],arr[0][1],arr[0][2]
+  //           arr[1][1]
+  // arr[2][0],arr[2][1],arr[2][2]
+  let sum;
   let result;
 
-  for (let i = 0; i < arrayLength; i++) {
-    for (let j = 0; j < arrayLength; j++) {
-      sum =
+  for (let i = 0; i < arr[0].length - 2; i++) {
+    for (let j = 0; j < arr[0].length - 2; j++) {
+      sum = 0;
+      sum +=
         arr[i][j] +
         arr[i][j + 1] +
         arr[i][j + 2] +
@@ -24,28 +33,13 @@ function arraySum(arr) {
         arr[i + 2][j] +
         arr[i + 2][j + 1] +
         arr[i + 2][j + 2];
-      if (sum > result || (i === 0 && j === 0)) {
+      if (result < sum || (i === 0 && j === 0)) {
         result = sum;
       }
     }
   }
 
   return result;
-}
-
-function main() {
-  let result;
-  let arr = Array(6);
-
-  for (let i = 0; i < 6; i++) {
-    arr[i] = readLine()
-      .split(" ")
-      .map((arrTemp) => parseInt(arrTemp, 10));
-  }
-
-  result = arraySum(arr);
-
-  console.log(result);
 }
 ```
 
