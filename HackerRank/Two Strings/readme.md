@@ -25,15 +25,14 @@ function twoStrings(s1, s2) {
   s2 = Array.from(s2);
 
   for (let key of s1) {
-    map[key] = (map[key] || 0) + 1;
+    map[key] = 0;
   }
   for (let key of s2) {
     if (key in map) {
-      map[key] = true;
+      return "YES";
     }
   }
-
-  return Object.values(map).includes(true) ? "YES" : "NO";
+  return "NO";
 }
 ```
 
@@ -50,3 +49,41 @@ console.log([key값] in map); //true or false
 // map(object)에서 value 확인
 console.log(Object.values(map).includes([value값])); //true or false
 ```
+
++) 코드 리뷰 진행 후 코드 변경
+
+> 변경 전
+
+```js
+for (let key of s1) {
+  map[key] = (map[key] || 0) + 1;
+}
+for (let key of s2) {
+  if (key in map) {
+    map[key] = true;
+  }
+}
+
+return Object.values(map).includes(true) ? "YES" : "NO";
+```
+
+> 변경 후
+
+```js
+for (let key of s1) {
+  map[key] = 0;
+}
+for (let key of s2) {
+  if (key in map) {
+    return "YES";
+  }
+}
+return "NO";
+```
+
+Hash Tables-Ransom Note의 영향을 너무 받았던 거 같다.
+
+굳이 1을 더할 필요도 없고 key의 value값을 true로 바꿀 필요도 없었다.
+
+map keys안에 s2의 key값이 있다면 "YES"를 return 없다면 "NO"를 return한다.
+필요없는 반복을 하지 말자.
